@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link rel="stylesheet"
+    href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"></link>
+    <script>
+      function generate() {
+        var uri = "/" + document.getElementById('fen').value;
+        document.getElementById('board').src = uri;
+      }
+    </script>
+  </head>
+  <body class="container">
+    <h1>Chessboard image embedder</h1>
+    <form >
+    <div class="form-group">
+      <label for="fen">FEN string</label>
+      <input class="form-control" placeholder="Enter the FEN string" type="text" id="fen" name="fen" />
+    </div>
+    <button  type="button" class="btn btn-default" onclick="generate()">Generate Board</button>
+  </form>
+    <img id="board"></img>
+  </body>
+</html>
